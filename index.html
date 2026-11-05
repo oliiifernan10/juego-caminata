@@ -1,15 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.js"></script>
-    
-    <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caminata con Aurora - Juego</title>
+    
+    <!-- Librerías de p5.js y p5.sound -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.js"></script>
+    
+    <!-- Tu archivo de estilos -->
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-    <main>
+    <!-- Contenedor principal estilo portfolio -->
+    <main class="game-container">
+      <header class="game-header">
+        <h1>Mochila de Caminata</h1>
+        <p>Ayuda a Aurora a armar su equipamiento antes de salir de aventura.</p>
+      </header>
+
+      <!-- Aquí p5.js insertará el lienzo automáticamente -->
+      <div id="canvas-wrapper"></div>
+
+      <footer class="game-footer">
+        <p>Proyecto interactivo desarrollado con p5.js</p>
+      </footer>
     </main>
+
+    <!-- Tu código de p5.js -->
     <script src="sketch.js"></script>
   </body>
 </html>

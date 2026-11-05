@@ -1,14 +1,70 @@
-html, body {
+/* Importamos una tipografía limpia y moderna tipo Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+  background-color: #1a1a1a; /* Fondo oscuro elegante */
+  color: #f0f0f0;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
+
+/* Tarjeta contenedora central (simula la estructura limpia de un portfolio) */
+.game-container {
+  background-color: #262626;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+  width: 90%;
+  border: 1px solid #333;
+}
+
+/* Estilo del título superior */
+.game-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.game-header h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffd369; /* Tono cálido destacado */
+  margin: 0 0 8px 0;
+}
+
+.game-header p {
+  font-size: 14px;
+  color: #aaa;
+  margin: 0;
+}
+
+/* Estilo estético para el lienzo del juego */
 canvas {
+  width: 420px !important;
+  height: 420px !important;
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  border: 2px solid #444;
   display: block;
 }
-canvas {
-  width: 80vw;  /* Hace que el juego ocupe gran parte del ancho de la pantalla */
-  height: auto; /* Mantiene la proporción cuadrada perfecta */
-  display: block;
-  margin: auto; /* Centra el juego en la pantalla */
-  background-color: #222; 
- }
+
+/* Pie de página sutil */
+.game-footer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.game-footer p {
+  font-size: 12px;
+  color: #777;
+  margin: 0;
+}
