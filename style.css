@@ -5,3 +5,10 @@ html, body {
 canvas {
   display: block;
 }
+canvas {
+  width: 80vw;  /* Hace que el juego ocupe gran parte del ancho de la pantalla */
+  height: auto; /* Mantiene la proporción cuadrada perfecta */
+  display: block;
+  margin: auto; /* Centra el juego en la pantalla */
+  background-color: #222; 
+ }
