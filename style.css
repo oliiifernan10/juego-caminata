@@ -242,11 +242,11 @@ canvas {
 /* Imágenes específicas asignadas a cada círculo */
 .circle-kit { background-image: url('kit.png'); }
 .circle-protector { background-image: url('protector.png'); }
-.circle-soga { background-image: url('soga.jpeg'); }
+.circle-soga { background-image: url('soga.png'); }
 .circle-barrita { background-image: url('barrita.png'); }
 .circle-botella { background-image: url('botella.png'); }
 .circle-linterna { background-image: url('linterna.png'); }
-.circle-brujula { background-image: url('brujula.jpeg'); }
+.circle-brujula { background-image: url('brujula.png'); }
 .circle-fosforo { background-image: url('fosforo.jpeg'); }
 
 /* Pie de página */
