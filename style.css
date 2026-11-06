@@ -127,7 +127,7 @@ canvas {
 
 .gallery-container {
   display: grid;
-  grid-template-columns: (2, 1);
+  grid-template-columns: repeat(2, 1);
   gap: 15px;
   max-width: 400px;
   margin: 0 auto;
@@ -143,7 +143,6 @@ canvas {
   transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
-/* La 5ta imagen se centra abajo */
 .gallery-img:nth-child(5) {
   grid-column: span 2;
   max-width: 190px;
@@ -152,7 +151,7 @@ canvas {
 
 .gallery-img:hover {
   transform: scale(1.05);
-  border-color:#ffd369;
+  border-color: #ffd369;
 }
 
 /* Estilos para la sección de Paleta de colores */
@@ -171,7 +170,7 @@ canvas {
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-/* Estilos para la sección "Jugando aprendemos" en círculos dispersos */
+/* Estilos base para los círculos de "Jugando aprendemos" */
 .circles-grid {
   display: flex;
   flex-wrap: wrap;
@@ -184,7 +183,6 @@ canvas {
 .circle-bubble {
   width: 170px;
   height: 170px;
-  background-color: #2e2825;
   border: 2px solid #ffd369;
   border-radius: 50%;
   display: flex;
@@ -193,28 +191,63 @@ canvas {
   padding: 18px;
   box-sizing: border-box;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition: transform 0.3s ease;
+  
+  /* Propiedades para configurar la imagen de fondo dentro del círculo */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
 }
 
+/* Capa oscura semitransparente por encima de la imagen para que el texto se lea claramente */
+.circle-bubble::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(30, 25, 22, 0.82); /* Fondo oscuro con transparencia */
+  z-index: 1;
+  transition: background-color 0.3s ease;
+}
+
+/* El texto debe estar por encima de la capa oscura */
 .circle-bubble p {
-  font-size: 10.5px;
+  position: relative;
+  z-index: 2;
+  font-size: 10px;
   line-height: 1.3;
-  color: #ddd;
+  color: #eee;
   margin: 0;
   font-family: 'Arial', sans-serif;
 }
 
 .circle-bubble strong {
   color: #ffd369;
-  font-size: 11.5px;
+  font-size: 11px;
   font-family: 'Arial', sans-serif;
 }
 
+/* Efecto al pasar el mouse */
 .circle-bubble:hover {
   transform: scale(1.08) rotate(2deg);
-  background-color: #38302b;
-  border-color: #88e788;
 }
+
+.circle-bubble:hover::before {
+  background-color: rgba(30, 25, 22, 0.65); /* Se aclara un poquito la imagen al pasar el mouse */
+}
+
+/* Imágenes específicas asignadas a cada círculo */
+.circle-kit { background-image: url('kit.png'); }
+.circle-protector { background-image: url('protector.png'); }
+.circle-soga { background-image: url('soga.jpeg'); }
+.circle-barrita { background-image: url('barrita.png'); }
+.circle-botella { background-image: url('botella.png'); }
+.circle-linterna { background-image: url('linterna.png'); }
+.circle-brujula { background-image: url('brujula.jpeg'); }
+.circle-fosforo { background-image: url('fosforo.jpeg'); }
 
 /* Pie de página */
 .game-footer {
@@ -226,25 +259,4 @@ canvas {
   color: #777;
   margin: 0;
   font-family: 'Arial', sans-serif;
-}
-
-/* Adaptación para pantallas pequeñas (celulares) */
-@media (max-width: 600px) {
-  .hero-section {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .text-content {
-    text-align: center;
-  }
-  
-  .gallery-container {
-    grid-template-columns: 1fr;
-  }
-
-  .gallery-img:nth-child(5) {
-    grid-column: span 1;
-    max-width: 100%;
-  }
 }
