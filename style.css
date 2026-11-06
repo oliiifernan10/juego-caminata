@@ -260,3 +260,51 @@ canvas {
   margin: 0;
   font-family: 'Arial', sans-serif;
 }
+.middle-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 25px;
+  margin: 25px 0 35px 0;
+  width: 100%;
+}
+
+.middle-text {
+  flex: 1;
+  text-align: left;
+}
+
+.middle-text p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #ccc;
+  margin: 0 0 10px 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.fondo-final-img-small {
+  width: 260px; /* Tamaño aumentado */
+  height: 180px; /* Tamaño aumentado */
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #444;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Adaptación para celulares */
+@media (max-width: 600px) {
+  .middle-section {
+    flex-direction: column-reverse; /* Hace que en celulares el texto quede arriba y la imagen abajo */
+    text-align: center;
+  }
+  
+  .fondo-final-img-small {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+  }
+  
+  .middle-text {
+    text-align: center;
+  }
+}
