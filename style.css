@@ -1,70 +1,250 @@
-/* Importamos una tipografía limpia y moderna tipo Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 body {
-  background-color: #1a1a1a; /* Fondo oscuro elegante */
-  color: #f0f0f0;
-  font-family: 'Poppins', sans-serif;
+  background-color: #e6dfd5; /* Fondo general de la página en un marrón clarito y suave */
+  color: #333333; /* Texto general en tono oscuro para una lectura cómoda */
+  font-family: 'Arial', sans-serif; /* Tipografía Arial para toda la página */
   margin: 0;
-  padding: 0;
+  padding: 40px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
 }
 
-/* Tarjeta contenedora central (simula la estructura limpia de un portfolio) */
+/* Contenedor principal estilo tarjeta */
 .game-container {
-  background-color: #262626;
-  padding: 30px;
+  background-color: #262626; /* Tarjeta interna oscura para que resalte */
+  color: #f0f0f0;
+  font-family: 'Arial', sans-serif; /* Aseguramos que el contenido de la tarjeta use Arial */
+  padding: 35px;
   border-radius: 16px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 500px;
-  width: 90%;
+  max-width: 800px;
+  width: 100%;
   border: 1px solid #333;
 }
 
-/* Estilo del título superior */
-.game-header {
-  text-align: center;
-  margin-bottom: 20px;
+/* 1. Distribución superior: Imagen al costado del texto */
+.hero-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 30px;
 }
 
-.game-header h1 {
+.personaje-img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #ffd369;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.text-content {
+  flex: 1;
+  text-align: left;
+}
+
+.text-content h1 {
   font-size: 24px;
-  font-weight: 600;
-  color: #ffd369; /* Tono cálido destacado */
-  margin: 0 0 8px 0;
+  color: #ffd369;
+  margin: 0 0 4px 0;
+  font-family: 'Arial', sans-serif;
 }
 
-.game-header p {
+.subtitle {
   font-size: 14px;
   color: #aaa;
-  margin: 0;
+  margin-bottom: 12px;
+  font-weight: 300;
+  font-family: 'Arial', sans-serif;
 }
 
-/* Estilo estético para el lienzo del juego */
+.text-content p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #ccc;
+  margin: 0 0 10px 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.highlight-text {
+  color: #88e788 !important;
+  font-weight: 600;
+}
+
+/* 2. Estilo del lienzo de p5.js (si estuviera activo) */
 canvas {
-  width: 420px !important;
-  height: 420px !important;
+  width: 400px !important;
+  height: 400px !important;
   max-width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   border: 2px solid #444;
-  display: block;
+  margin-bottom: 30px;
 }
 
-/* Pie de página sutil */
-.game-footer {
-  margin-top: 20px;
+/* 3. Imagen inferior: fondoFinal */
+.footer-image-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.fondo-final-img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid #444;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* 4. Sección de Referencias artísticas (Imágenes más chicas organizadas en grilla) */
+.procesos-section {
+  width: 100%;
+  margin-top: 30px;
   text-align: center;
+}
+
+.procesos-section h2 {
+  font-size: 20px;
+  color: #ffd369;
+  margin-bottom: 15px;
+  font-weight: 600;
+  border-bottom: 2px solid #333;
+  padding-bottom: 6px;
+  display: inline-block;
+  font-family: 'Arial', sans-serif;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: (2, 1);
+  gap: 15px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #444;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+/* La 5ta imagen se centra abajo */
+.gallery-img:nth-child(5) {
+  grid-column: span 2;
+  max-width: 190px;
+  margin: 0 auto;
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+  border-color:#ffd369;
+}
+
+/* Estilos para la sección de Paleta de colores */
+.paleta-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.paleta-img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid #444;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Estilos para la sección "Jugando aprendemos" en círculos dispersos */
+.circles-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 25px;
+  padding: 10px;
+}
+
+.circle-bubble {
+  width: 170px;
+  height: 170px;
+  background-color: #2e2825;
+  border: 2px solid #ffd369;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 18px;
+  box-sizing: border-box;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.circle-bubble p {
+  font-size: 10.5px;
+  line-height: 1.3;
+  color: #ddd;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.circle-bubble strong {
+  color: #ffd369;
+  font-size: 11.5px;
+  font-family: 'Arial', sans-serif;
+}
+
+.circle-bubble:hover {
+  transform: scale(1.08) rotate(2deg);
+  background-color: #38302b;
+  border-color: #88e788;
+}
+
+/* Pie de página */
+.game-footer {
+  margin-top: 30px;
 }
 
 .game-footer p {
   font-size: 12px;
   color: #777;
   margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Adaptación para pantallas pequeñas (celulares) */
+@media (max-width: 600px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .text-content {
+    text-align: center;
+  }
+  
+  .gallery-container {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-img:nth-child(5) {
+    grid-column: span 1;
+    max-width: 100%;
+  }
 }
