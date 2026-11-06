@@ -3,32 +3,87 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caminata con Aurora - Juego</title>
-    
-    <!-- Librerías de p5.js y p5.sound -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.js"></script>
+    <title>Caminata con Aurora - Proyecto</title>
     
     <!-- Tu archivo de estilos -->
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-    <!-- Contenedor principal estilo portfolio -->
     <main class="game-container">
-      <header class="game-header">
-        <h1>Mochila de Caminata</h1>
-        <p>Ayuda a Aurora a armar su equipamiento antes de salir de aventura.</p>
-      </header>
+      
+      <!-- Seccion superior: Personaje al costado del texto -->
+      <section class="hero-section">
+        <img src="personaje.jpeg" alt="Aurora" class="personaje-img">
+        <div class="text-content">
+          <h1>Mochila de Caminata</h1>
+          <p class="subtitle">Aprende con Aurora a armar una mochila de caminata.</p>
+          <p>
+            Aurora es invitada a realizar una caminata larga por una montaña. Ella junto con vos va a tener que aprender a armar su mochila especial en donde llevará todos sus ítems más importantes. Trata de ocupar la mochila con objetos útiles y livianos, previniendo cualquier incidente que pueda ocurrir en el trayecto hasta el destino y dejando atrás las cosas menos importantes.
+          </p>
+          <p class="highlight-text">¡Adéntrate en el bosque y comienza a explorar!</p>
+        </div>
+      </section>
 
-      <!-- Aquí p5.js insertará el lienzo automáticamente -->
-      <div id="canvas-wrapper"></div>
+      <!-- Imagen central: fondoFinal -->
+      <section class="footer-image-section">
+        <img src="fondoFinal.jpg" alt="Fondo Final" class="fondo-final-img">
+      </section>
+
+      <!-- Sección de Referencias artísticas -->
+      <section class="procesos-section">
+        <h2>Referencias artísticas</h2>
+        <div class="gallery-container">
+          <img src="imagen1.jpeg" alt="Referencia 1" class="gallery-img">
+          <img src="imagen2.jpeg" alt="Referencia 2" class="gallery-img">
+          <img src="imagen3.jpeg" alt="Referencia 3" class="gallery-img">
+          <img src="imagen4.jpeg" alt="Referencia 4" class="gallery-img">
+          <img src="imagen5.jpeg" alt="Referencia 5" class="gallery-img">
+        </div>
+      </section>
+
+      <!-- Sección de Paleta de colores -->
+      <section class="procesos-section">
+        <h2>Paleta de colores</h2>
+        <div class="paleta-container">
+          <img src="Paleta.jpg" alt="Paleta de colores" class="paleta-img">
+        </div>
+      </section>
+
+      <!-- Nueva Sección: Jugando aprendemos (textos en círculos dispersos) -->
+      <section class="procesos-section">
+        <h2>Jugando aprendemos</h2>
+        <div class="circles-grid">
+          <div class="circle-bubble">
+            <p><strong>Kit de emergencia</strong><br>Importante para cualquier incidente de menor o mayor rango.</p>
+          </div>
+          <div class="circle-bubble">
+            <p><strong>Protector solar</strong><br>No se le da importancia hasta que uno se insola.</p>
+          </div>
+          <div class="circle-bubble">
+            <p><strong>Soga</strong><br>¡Multiusos en su máxima expresión! Para atar cosas sueltas, transportar un compañero herido o asegurar la comida.</p>
+          </div>
+          <div class="circle-bubble">
+            <p><strong>Barritas</strong><br>Mucho gasto de energía requiere comida que dé energía, qué mejor que una barrita de cereal.</p>
+          </div>
+          <div class="circle-bubble">
+            <p><strong>Botella de agua</strong><br>¡Siempre hidratada!</p>
+          </div>
+          <div class="circle-bubble">
+            <p><strong>Linterna</strong><br>Uno cree que no lo necesita hasta que se oscurece y no tiene nada para alumbrar.</p>
+          </div>
+          <div class="circle-bubble">
+            <p><strong>Brújula</strong><br>En un lugar donde la señal puede fallar, siempre una brújula hay que llevar.</p>
+          </div>
+          <div class="circle-bubble">
+            <p><strong>Fósforo</strong><br>Para encender un fuego siempre es de ayuda.</p>
+          </div>
+        </div>
+      </section>
 
       <footer class="game-footer">
         <p>Proyecto interactivo desarrollado con p5.js</p>
       </footer>
-    </main>
 
-    <!-- Tu código de p5.js -->
-    <script src="sketch.js"></script>
+    </main>
   </body>
 </html>
